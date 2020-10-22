@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS replication_step1_output (
+      action_name STRING,         -- action for the entity
+      src_path STRING,       -- source entity path
+      dest_path STRING,      -- destination enitity path
+      copy_data STRING,      -- should copy data
+      copy_metadata STRING,  -- should copy metadata
+      db_name STRING,        -- database name
+      table_name STRING,     -- table name
+      partition_name STRING) -- partition spec
+PARTITIONED BY (
+      job_start_time STRING)          -- job run timestamp
+ROW FORMAT DELIMITED
+  FIELDS TERMINATED BY '\t'
+STORED AS TEXTFILE;
+
+LOAD DATA INPATH '$step1_output_directory' OVERWRITE INTO TABLE replication_step1_output
+PARTITION (job_start_time = '$job_start_time');

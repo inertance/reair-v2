@@ -1,0 +1,26 @@
+apply plugin: "com.github.johnrengelman.shadow"
+buildscript {
+  repositories { jcenter() }
+  dependencies { classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.3' }
+}
+
+description = 'Airbnb ReAir Hive Hooks'
+
+dependencies {
+  compile(project(':airbnb-reair-utils'))
+  compile(group: 'com.fasterxml.jackson.core', name: 'jackson-core', version:'2.6.2')
+  compile(group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version:'2.6.2')
+  compile(group: 'commons-cli', name: 'commons-cli', version:'1.2')
+  compile(group: 'mysql', name: 'mysql-connector-java', version:'5.1.17')
+  compile(group: 'org.apache.commons', name: 'commons-lang3', version:'3.4')
+  provided(group: 'org.apache.hadoop', name: 'hadoop-common', version:'2.5.0-cdh5.3.3')
+  provided(group: 'org.apache.hadoop', name: 'hadoop-distcp', version:'2.5.0-cdh5.3.3')
+  provided(group: 'org.apache.hadoop', name: 'hadoop-mapreduce-client-core', version:'2.5.0-cdh5.3.3')
+  provided(group: 'org.apache.hadoop', name: 'hadoop-mapreduce-client-jobclient', version:'2.5.0-cdh5.3.3')
+  provided(group: 'org.apache.hive', name: 'hive-common', version:'0.13.1-cdh5.3.3')
+  provided(group: 'org.apache.hive', name: 'hive-exec', version:'0.13.1-cdh5.3.3')
+  testCompile(group: 'junit', name: 'junit', version:'4.11')
+  testCompile(group: 'mysql', name: 'mysql-connector-mxj', version:'5.0.12')
+  testCompile(group: 'org.apache.hadoop', name: 'hadoop-minicluster', version:'2.5.0')
+  testCompile(group: 'org.mockito', name: 'mockito-core', version:'1.9.5')
+}

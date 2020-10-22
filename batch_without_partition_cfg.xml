@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+  <property>
+    <name>airbnb.reair.clusters.src.name</name>
+    <value>production</value>
+    <comment>
+      Name of the source cluster. It can be an arbitrary string and is used in
+      logs, tags, etc.
+    </comment>
+  </property>
+
+  <property>
+    <name>airbnb.reair.clusters.src.metastore.url</name>
+    <value>thrift://10.0.0.56:9083</value>
+    <comment>Source metastore Thrift URL.</comment>
+  </property>
+
+  <property>
+    <name>airbnb.reair.clusters.src.hdfs.root</name>
+    <value>hdfs://nn1/</value>
+    <comment>Source cluster HDFS root. Note trailing slash.</comment>
+  </property>
+
+  <property>
+    <name>airbnb.reair.clusters.src.hdfs.tmp</name>
+    <value>hdfs://nn1/tmp/replication</value>
+    <comment>
+      Directory for temporary files on the source cluster.
+    </comment>
+  </property>
+
+  <property>
+    <name>airbnb.reair.clusters.dest.name</name>
+    <value>test</value>
+    <comment>
+      Name of the source cluster. It can be an arbitrary string and is used in
+      logs, tags, etc.
+    </comment>
+  </property>
+
+  <property>
+    <name>airbnb.reair.clusters.dest.metastore.url</name>
+    <value>thrift://10.0.165.5:9083</value>
+    <comment>Destination metastore Thrift URL.</comment>
+  </property>
+
+  <property>
+    <name>airbnb.reair.clusters.dest.hdfs.root</name>
+    <value>hdfs://10.0.165.3:8020/</value>
+    <comment>Destination cluster HDFS root. Note trailing slash.</comment>
+  </property>
+
+  <property>
+    <name>airbnb.reair.clusters.dest.hdfs.tmp</name>
+    <value>hdfs://10.0.165.3:8020/tmp/hive_replication</value>
+    <comment>
+      Directory for temporary files on the source cluster. Table / partition
+      data is copied to this location before it is moved to the final location,
+      so it should be on the same filesystem as the final location.
+    </comment>
+  </property>
+
+  <property>
+    <name>airbnb.reair.clusters.batch.output.dir</name>
+    <value>hdfs://10.0.165.3:8020/user/test/test_output/</value>
+    <comment>
+      This configuration must be provided. It gives location to store each stage
+      MR job output.
+    </comment>
+  </property>
+
+  <property>
+    <name>airbnb.reair.clusters.batch.metastore.blacklist</name>
+    <value>iot:increment</value>
+    <comment>
+      Comma seperated regex blacklist. dbname_regex:tablename_regex,...
+    </comment>
+  </property>
+
+  <property>
+    <name>airbnb.reair.batch.metastore.parallelism</name>
+    <value>150</value>
+    <comment>
+      The parallelism to use for jobs requiring metastore calls. This translates to the number of
+      mappers or reducers in the relevant jobs.
+    </comment>
+  </property>
+
+  <property>
+    <name>airbnb.reair.batch.copy.parallelism</name>
+    <value>150</value>
+    <comment>
+      The parallelism to use for jobs that copy files. This translates to the number of reducers
+      in the relevant jobs.
+    </comment>
+  </property>
+
+  <property>
+    <name>mapreduce.map.speculative</name>
+    <value>false</value>
+    <comment>
+      Speculative execution is currently not supported for batch replication.
+    </comment>
+  </property>
+
+  <property>
+    <name>mapreduce.reduce.speculative</name>
+    <value>false</value>
+    <comment>
+      Speculative execution is currently not supported for batch replication.
+    </comment>
+  </property>
+
+</configuration>

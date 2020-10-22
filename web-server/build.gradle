@@ -1,0 +1,24 @@
+apply plugin: "com.github.johnrengelman.shadow"
+buildscript {
+  repositories { jcenter() }
+  dependencies { classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.3' }
+}
+
+description = 'Airbnb ReAir Web Server'
+
+dependencies {
+  compile(project(':airbnb-reair-thrift'))
+  compile(group: 'commons-cli', name: 'commons-cli', version:'1.2')
+  compile(group: 'com.sparkjava', name: 'spark-core', version:'2.3')
+  compile(group: 'org.thymeleaf', name: 'thymeleaf', version:'2.1.3.RELEASE')
+  compile(group: 'org.apache.thrift', name: 'libthrift', version:'0.9.1')
+}
+
+jar {
+  manifest {
+    attributes(
+      //'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+      'Main-Class': 'com.airbnb.reair.WebServer'
+    )
+  }
+}

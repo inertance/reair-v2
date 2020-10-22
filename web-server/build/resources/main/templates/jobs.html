@@ -1,0 +1,104 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Replication Server Status</title>
+    <style>
+
+        body { font-family: monospace; }
+        table {
+          border-collapse: collapse;
+        }
+
+        table, td, th {
+          border: 2px solid black;
+        }
+
+        th, td {
+          padding: 3px;
+        }
+
+        .grayback {
+          background-color: #DDDDDD;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>
+    Replication Server @
+    <span th:text="${host}">host</span>:<span th:text="${port}">port</span>
+</h1>
+
+<span th:if = "${not data_fetch_successful}">Error while fetching data!</span>
+
+<div th:if="${data_fetch_successful}">
+
+<h2>Lag: <span th:text="${lag_in_minutes}">1234</span> minutes(s) </h2>
+
+<h2>Jobs: <span th:text="${active_jobs.size()}">0</span> Active </h2>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Create Time</th>
+            <th>Operation</th>
+            <th>Status</th>
+            <th>Source Cluster</th>
+            <th>Source DB</th>
+            <th>Source Table</th>
+            <th>Source Partitions</th>
+            <th>Rename to DB</th>
+            <th>Rename to Table</th>
+            <th>Extras</th>
+            <th>Waiting on Jobs</th>
+        </tr>
+        <tr>
+            <td th:if="${active_jobs.size()} &gt; 0" colspan="12"
+                class="grayback">
+                Active Jobs
+            </td>
+        </tr>
+        <tr th:each="job : ${active_jobs}">
+            <td th:text="${job.getId()}">Value</td>
+            <td th:text="${date_utils.convertToIso8601(job.getCreateTime())}">Value</td>
+            <td th:text="${job.getOperation()}">Value</td>
+            <td th:text="${job.getStatus()}">Value</td>
+            <td th:text="${job.getSrcCluster()}">Value</td>
+            <td th:text="${job.getSrcDb()}">Value</td>
+            <td th:text="${job.getSrcTable()}">Value</td>
+            <td th:text="${job.getSrcPartitions().size()} &gt; 1 ? 'Many' : ${job.getSrcPartitions()}">Value</td>
+            <td th:text="${job.getRenameToDb()}">Value</td>
+            <td th:text="${job.getRenameToTable()}">Value</td>
+            <td th:text="${job.getExtras()}">Value</td>
+            <td th:text="${job.getWaitingOnJobs()}">Value</td>
+        </tr>
+        <tr>
+            <td th:if="${retired_jobs.size()} &gt; 0" colspan="12"
+                class="grayback">
+                Retired Jobs
+            </td>
+        </tr>
+        <tr th:each="job : ${retired_jobs}">
+            <td th:text="${job.getId()}">Value</td>
+            <td th:text="${date_utils.convertToIso8601(job.getCreateTime())}">Value</td>
+            <td th:text="${job.getOperation()}">Value</td>
+            <td th:text="${job.getStatus()}">Value</td>
+            <td th:text="${job.getSrcCluster()}">Value</td>
+            <td th:text="${job.getSrcDb()}">Value</td>
+            <td th:text="${job.getSrcTable()}">Value</td>
+            <td th:text="${job.getSrcPartitions().size()} &gt; 1 ? 'Many' : ${job.getSrcPartitions()}">Value</td>
+            <td th:text="${job.getRenameToDb()}">Value</td>
+            <td th:text="${job.getRenameToTable()}">Value</td>
+            <td th:text="${job.getExtras()}">Value</td>
+            <td th:text="${job.getWaitingOnJobs()}">Value</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+
+</html>

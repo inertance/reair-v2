@@ -1,0 +1,66 @@
+allprojects  {
+  group = 'com.airbnb'
+  version = '1.0.0'
+}
+
+subprojects {
+  configurations {
+    checkstyleOverride
+    provided
+    testCompileOverride
+  }
+
+  configurations.all {
+    // Version conflict between velocity:1.7 (depends on common-lang:2.4) and various hadoop
+    // libraries, e.g. hadoop-common:jar:2.5.0-cdh5.3.3 (depend on common-lang2.6). Here we force
+    // common-lang:2.6 to be used. This is dangerous, but common-lang:2.6 seems to be compatible
+    // with velocity:1.7, so keep it for now, until the conflict can be fixed.
+  }
+
+  apply plugin: 'checkstyle'
+  apply plugin: 'java'
+  apply plugin: 'maven'
+
+  sourceSets {
+    main {
+      compileClasspath += configurations.provided
+      runtimeClasspath += configurations.provided
+    }
+    test {
+      compileClasspath = configurations.testCompileOverride +
+        sourceSets.test.compileClasspath + configurations.provided
+      runtimeClasspath = configurations.testCompileOverride +
+        sourceSets.test.runtimeClasspath + configurations.provided
+    }
+  }
+
+  dependencies {
+    checkstyleOverride('com.puppycrawl.tools:checkstyle:6.11.2')
+  }
+
+  tasks.withType(Checkstyle) {
+    checkstyleClasspath = project.configurations.checkstyleOverride
+    configFile rootProject.file('build-config/google_checkstyle.xml')
+    checkstyleMain.exclude '**/com/airbnb/reair/incremental/thrift/**'
+  }
+  // TODO Not ideal because linting information is displayed even when the build failed for a
+  // different reason
+  project.gradle.buildFinished { buildResult ->
+    if (buildResult.getFailure() != null) {
+      println "Reports: " + checkstyleMain.reports.getXml().getDestination().text
+    }
+  }
+
+  repositories {
+    mavenLocal()
+    //maven { url "https://repo.maven.apache.org/maven2" }
+    maven { url "https://repository.cloudera.com/artifactory/cloudera-repos/" }
+    maven { url "https://repo1.maven.org/maven2/" }
+    maven { url "https://repo2.maven.org/maven2/" }
+  }
+
+  compileJava {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+  }
+}

@@ -1,0 +1,822 @@
+2020-10-15 16:34:00 [main] DEBUG org.apache.hadoop.util.Shell - setsid exited with exit code 0
+2020-10-15 16:34:00 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL jar:file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar!/core-default.xml
+2020-10-15 16:34:00 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream sun.net.www.protocol.jar.JarURLConnection$JarURLInputStream@7921b0a2
+2020-10-15 16:34:00 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/etc/hadoop/conf.empty/core-site.xml
+2020-10-15 16:34:00 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream java.io.BufferedInputStream@1e397ed7
+2020-10-15 16:34:00 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 16:34:00 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, about=, sampleName=Ops, type=DEFAULT, valueName=Time, value=[Rate of successful kerberos logins and latency (milliseconds)])
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, about=, sampleName=Ops, type=DEFAULT, valueName=Time, value=[Rate of failed kerberos logins and latency (milliseconds)])
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, about=, sampleName=Ops, type=DEFAULT, valueName=Time, value=[GetGroups])
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, about=, sampleName=Ops, type=DEFAULT, valueName=Time, value=[Renewal failures since startup])
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, about=, sampleName=Ops, type=DEFAULT, valueName=Time, value=[Renewal failures since last successful login])
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.metrics2.impl.MetricsSystemImpl - UgiMetrics, User and group related metrics
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.security.SecurityUtil - Setting hadoop.security.token.service.use_ip to true
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.security.Groups -  Creating new Groups object
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.security.Groups - Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping; cacheTimeout=300000; warningDeltaMs=5000
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login commit
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - Using user: "hdfs" with name hdfs
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - User entry: "hdfs"
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - UGI loginUser:hdfs (auth:SIMPLE)
+2020-10-15 16:34:01 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 16:34:01 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - Loading filesystems
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - s3n:// = class org.apache.hadoop.fs.s3native.NativeS3FileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-aws-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - gs:// = class com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/lib/hadoop/gcs-connector-hadoop3-1.9.10-cdh6.2.1-shaded.jar
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - file:// = class org.apache.hadoop.fs.LocalFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - viewfs:// = class org.apache.hadoop.fs.viewfs.ViewFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - ftp:// = class org.apache.hadoop.fs.ftp.FTPFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - har:// = class org.apache.hadoop.fs.HarFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - http:// = class org.apache.hadoop.fs.http.HttpFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - https:// = class org.apache.hadoop.fs.http.HttpsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - hdfs:// = class org.apache.hadoop.hdfs.DistributedFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - webhdfs:// = class org.apache.hadoop.hdfs.web.WebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - swebhdfs:// = class org.apache.hadoop.hdfs.web.SWebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking for FS supporting hdfs
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - looking for configuration option fs.hdfs.impl
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking in service filesystems for implementation class
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.fs.FileSystem - FS for hdfs is class org.apache.hadoop.hdfs.DistributedFileSystem
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.use.legacy.blockreader.local = false
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.read.shortcircuit = false
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.domain.socket.data.traffic = false
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.domain.socket.path = /var/run/hdfs-sockets/dn
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - Sets dfs.client.block.write.replace-datanode-on-failure.min-replication to 0
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.io.retry.RetryUtils - multipleLinearRandomRetry = null
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.ipc.Server - rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcProtobufRequest, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@28975c28
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.ipc.Client - ipc.client.bind.wildcard.addr set to true. Will bind client sockets to wildcard address.
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.ipc.Client - getting client out of cache: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Trying to load the custom-built native-hadoop library...
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Loaded the native-hadoop library
+2020-10-15 16:34:01 [client DomainSocketWatcher] DEBUG org.apache.hadoop.net.unix.DomainSocketWatcher - org.apache.hadoop.net.unix.DomainSocketWatcher$2@5c88c817: starting with interruptCheckPeriodMs = 60000
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.util.PerformanceAdvisory - Both short-circuit local reads and UNIX domain socket are disabled.
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.DataTransferSaslUtil - DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.ipc.Client - The ping interval is 60000 ms.
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.ipc.Client - Connecting to fbi-local-03/10.0.165.3:8020
+2020-10-15 16:34:01 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs: starting, having connections 1
+2020-10-15 16:34:01 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #0 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:34:01 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #0
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 47ms
+2020-10-15 16:34:01 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #1 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:34:01 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #1
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:34:01 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #2 org.apache.hadoop.hdfs.protocol.ClientProtocol.getServerDefaults
+2020-10-15 16:34:01 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #2
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getServerDefaults took 1ms
+2020-10-15 16:34:01 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #3 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:34:01 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #3
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 0ms
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - /user/hdfs/.Trash/Current/tmp/test: masked={ masked: rwx------, unmasked: rwx------ }
+2020-10-15 16:34:01 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #4 org.apache.hadoop.hdfs.protocol.ClientProtocol.mkdirs
+2020-10-15 16:34:01 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #4
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: mkdirs took 1ms
+2020-10-15 16:34:01 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #5 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:34:01 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #5
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:34:01 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #6 org.apache.hadoop.hdfs.protocol.ClientProtocol.rename2
+2020-10-15 16:34:01 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #6
+2020-10-15 16:34:01 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: rename2 took 1ms
+2020-10-15 16:34:01 [main] INFO org.apache.hadoop.fs.TrashPolicyDefault - Moved: 'hdfs://fbi-local-03:8020/tmp/test/my_config_file.xml' to trash at: hdfs://fbi-local-03:8020/user/hdfs/.Trash/Current/tmp/test/my_config_file.xml
+2020-10-15 16:34:01 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping client from cache: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 16:34:01 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - removing client from cache: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 16:34:01 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 16:34:01 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - Stopping client
+2020-10-15 16:34:01 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs: closed
+2020-10-15 16:34:01 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs: stopped, remaining connections 0
+2020-10-15 16:34:02 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - Completed shutdown in 0.103 seconds; Timeouts: 0
+2020-10-15 16:34:02 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - ShutdownHookManger completed shutdown.
+2020-10-15 16:34:30 [main] DEBUG org.apache.hadoop.util.Shell - setsid exited with exit code 0
+2020-10-15 16:34:30 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL jar:file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar!/core-default.xml
+2020-10-15 16:34:30 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream sun.net.www.protocol.jar.JarURLConnection$JarURLInputStream@7921b0a2
+2020-10-15 16:34:30 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/etc/hadoop/conf.empty/core-site.xml
+2020-10-15 16:34:30 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream java.io.BufferedInputStream@1e397ed7
+2020-10-15 16:34:30 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 16:34:30 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 16:34:30 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, always=false, sampleName=Ops, type=DEFAULT, valueName=Time, value=[Rate of successful kerberos logins and latency (milliseconds)])
+2020-10-15 16:34:30 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, always=false, sampleName=Ops, type=DEFAULT, valueName=Time, value=[Rate of failed kerberos logins and latency (milliseconds)])
+2020-10-15 16:34:30 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, always=false, sampleName=Ops, type=DEFAULT, valueName=Time, value=[GetGroups])
+2020-10-15 16:34:30 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, always=false, sampleName=Ops, type=DEFAULT, valueName=Time, value=[Renewal failures since startup])
+2020-10-15 16:34:30 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, always=false, sampleName=Ops, type=DEFAULT, valueName=Time, value=[Renewal failures since last successful login])
+2020-10-15 16:34:30 [main] DEBUG org.apache.hadoop.metrics2.impl.MetricsSystemImpl - UgiMetrics, User and group related metrics
+2020-10-15 16:34:30 [main] DEBUG org.apache.hadoop.security.SecurityUtil - Setting hadoop.security.token.service.use_ip to true
+2020-10-15 16:34:30 [main] DEBUG org.apache.hadoop.security.Groups -  Creating new Groups object
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.security.Groups - Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping; cacheTimeout=300000; warningDeltaMs=5000
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login commit
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - Using user: "hdfs" with name hdfs
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - User entry: "hdfs"
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - UGI loginUser:hdfs (auth:SIMPLE)
+2020-10-15 16:34:31 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 16:34:31 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - Loading filesystems
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - s3n:// = class org.apache.hadoop.fs.s3native.NativeS3FileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-aws-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - gs:// = class com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/lib/hadoop/gcs-connector-hadoop3-1.9.10-cdh6.2.1-shaded.jar
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - file:// = class org.apache.hadoop.fs.LocalFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - viewfs:// = class org.apache.hadoop.fs.viewfs.ViewFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - ftp:// = class org.apache.hadoop.fs.ftp.FTPFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - har:// = class org.apache.hadoop.fs.HarFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - http:// = class org.apache.hadoop.fs.http.HttpFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - https:// = class org.apache.hadoop.fs.http.HttpsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - hdfs:// = class org.apache.hadoop.hdfs.DistributedFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - webhdfs:// = class org.apache.hadoop.hdfs.web.WebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - swebhdfs:// = class org.apache.hadoop.hdfs.web.SWebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking for FS supporting hdfs
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - looking for configuration option fs.hdfs.impl
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking in service filesystems for implementation class
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - FS for hdfs is class org.apache.hadoop.hdfs.DistributedFileSystem
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.use.legacy.blockreader.local = false
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.read.shortcircuit = false
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.domain.socket.data.traffic = false
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.domain.socket.path = /var/run/hdfs-sockets/dn
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - Sets dfs.client.block.write.replace-datanode-on-failure.min-replication to 0
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.io.retry.RetryUtils - multipleLinearRandomRetry = null
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.ipc.Server - rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcProtobufRequest, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@236e3f4e
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.ipc.Client - ipc.client.bind.wildcard.addr set to true. Will bind client sockets to wildcard address.
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.ipc.Client - getting client out of cache: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Trying to load the custom-built native-hadoop library...
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Loaded the native-hadoop library
+2020-10-15 16:34:31 [client DomainSocketWatcher] DEBUG org.apache.hadoop.net.unix.DomainSocketWatcher - org.apache.hadoop.net.unix.DomainSocketWatcher$2@6239e8fa: starting with interruptCheckPeriodMs = 60000
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.util.PerformanceAdvisory - Both short-circuit local reads and UNIX domain socket are disabled.
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.DataTransferSaslUtil - DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.ipc.Client - The ping interval is 60000 ms.
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.ipc.Client - Connecting to fbi-local-03/10.0.165.3:8020
+2020-10-15 16:34:31 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs: starting, having connections 1
+2020-10-15 16:34:31 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #0 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:34:31 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #0
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 50ms
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking for FS supporting file
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - looking for configuration option fs.file.impl
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking in service filesystems for implementation class
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.fs.FileSystem - FS for file is class org.apache.hadoop.fs.LocalFileSystem
+2020-10-15 16:34:31 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #1 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:34:31 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #1
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:34:31 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #2 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:34:31 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #2
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - /tmp/test/my_config_file.xml._COPYING_: masked={ masked: rw-r--r--, unmasked: rw-rw-rw- }
+2020-10-15 16:34:31 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #3 org.apache.hadoop.hdfs.protocol.ClientProtocol.create
+2020-10-15 16:34:31 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #3
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: create took 2ms
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - computePacketChunkSize: src=/tmp/test/my_config_file.xml._COPYING_, chunkSize=516, chunksPerPacket=126, packetSize=65016
+2020-10-15 16:34:31 [LeaseRenewer:hdfs@fbi-local-03:8020] DEBUG org.apache.hadoop.hdfs.client.impl.LeaseRenewer - Lease renewer daemon for [DFSClient_NONMAPREDUCE_-28234207_1] with renew id 1 started
+2020-10-15 16:34:31 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #4 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:34:31 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #4
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - WriteChunk allocating new packet seqno=0, src=/tmp/test/my_config_file.xml._COPYING_, packetSize=65016, chunksPerPacket=126, bytesCurBlock=0, DFSOutputStream:block==null
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.hdfs.DataStreamer - Queued packet seqno: 0 offsetInBlock: 0 lastPacketInBlock: false lastByteOffsetInBlock: 4243, block==null
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.hdfs.DataStreamer - Queued packet seqno: 1 offsetInBlock: 4243 lastPacketInBlock: true lastByteOffsetInBlock: 4243, block==null
+2020-10-15 16:34:31 [main] DEBUG org.apache.hadoop.hdfs.DataStreamer - block==null waiting for ack for: 1
+2020-10-15 16:34:31 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - stage=PIPELINE_SETUP_CREATE, block==null
+2020-10-15 16:34:31 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - Allocating new block: block==null
+2020-10-15 16:34:31 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #5 org.apache.hadoop.hdfs.protocol.ClientProtocol.addBlock
+2020-10-15 16:34:31 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #5
+2020-10-15 16:34:31 [Thread-7] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: addBlock took 1ms
+2020-10-15 16:34:31 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - pipeline = [DatanodeInfoWithStorage[10.0.165.4:9866,DS-fb3f7c0a-b7a7-43f9-baff-7a8d445dc6d9,DISK], DatanodeInfoWithStorage[10.0.165.6:9866,DS-b40fa921-4895-40ff-b1fe-1159e51cbf6c,DISK], DatanodeInfoWithStorage[10.0.165.7:9866,DS-78e30179-1617-486e-9e7b-a91df93bbe3c,DISK]], blk_1074032176_291553
+2020-10-15 16:34:31 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - Connecting to datanode 10.0.165.4:9866
+2020-10-15 16:34:31 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - Send buf size 43520
+2020-10-15 16:34:31 [Thread-7] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.SaslDataTransferClient - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-10-15 16:34:31 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #6 org.apache.hadoop.hdfs.protocol.ClientProtocol.getServerDefaults
+2020-10-15 16:34:31 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #6
+2020-10-15 16:34:31 [Thread-7] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getServerDefaults took 1ms
+2020-10-15 16:34:31 [Thread-7] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.SaslDataTransferClient - SASL client skipping handshake in unsecured configuration for addr = /10.0.165.4, datanodeId = DatanodeInfoWithStorage[10.0.165.4:9866,DS-fb3f7c0a-b7a7-43f9-baff-7a8d445dc6d9,DISK]
+2020-10-15 16:34:32 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032176_291553] DEBUG org.apache.hadoop.hdfs.DataStreamer - nodes [DatanodeInfoWithStorage[10.0.165.4:9866,DS-fb3f7c0a-b7a7-43f9-baff-7a8d445dc6d9,DISK], DatanodeInfoWithStorage[10.0.165.6:9866,DS-b40fa921-4895-40ff-b1fe-1159e51cbf6c,DISK], DatanodeInfoWithStorage[10.0.165.7:9866,DS-78e30179-1617-486e-9e7b-a91df93bbe3c,DISK]] storageTypes [DISK, DISK, DISK] storageIDs [DS-fb3f7c0a-b7a7-43f9-baff-7a8d445dc6d9, DS-b40fa921-4895-40ff-b1fe-1159e51cbf6c, DS-78e30179-1617-486e-9e7b-a91df93bbe3c]
+2020-10-15 16:34:32 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032176_291553] DEBUG org.apache.hadoop.hdfs.DataStreamer - blk_1074032176_291553 sending packet seqno: 0 offsetInBlock: 0 lastPacketInBlock: false lastByteOffsetInBlock: 4243
+2020-10-15 16:34:32 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032176_291553] DEBUG org.apache.hadoop.hdfs.DataStreamer - stage=DATA_STREAMING, blk_1074032176_291553
+2020-10-15 16:34:32 [ResponseProcessor for block BP-2089173292-10.0.165.3-1591668467417:blk_1074032176_291553] DEBUG org.apache.hadoop.hdfs.DataStreamer - DFSClient seqno: 0 reply: SUCCESS reply: SUCCESS reply: SUCCESS downstreamAckTimeNanos: 699182 flag: 0 flag: 0 flag: 0
+2020-10-15 16:34:32 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032176_291553] DEBUG org.apache.hadoop.hdfs.DataStreamer - blk_1074032176_291553 sending packet seqno: 1 offsetInBlock: 4243 lastPacketInBlock: true lastByteOffsetInBlock: 4243
+2020-10-15 16:34:32 [ResponseProcessor for block BP-2089173292-10.0.165.3-1591668467417:blk_1074032176_291553] DEBUG org.apache.hadoop.hdfs.DataStreamer - DFSClient seqno: 1 reply: SUCCESS reply: SUCCESS reply: SUCCESS downstreamAckTimeNanos: 1361717 flag: 0 flag: 0 flag: 0
+2020-10-15 16:34:32 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032176_291553] DEBUG org.apache.hadoop.hdfs.DataStreamer - Closing old block BP-2089173292-10.0.165.3-1591668467417:blk_1074032176_291553
+2020-10-15 16:34:32 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #7 org.apache.hadoop.hdfs.protocol.ClientProtocol.complete
+2020-10-15 16:34:32 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #7
+2020-10-15 16:34:32 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: complete took 2ms
+2020-10-15 16:34:32 [main] DEBUG org.apache.hadoop.hdfs.DFSOutputStream - Closing an already closed stream. [Stream:true, streamer:true]
+2020-10-15 16:34:32 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #8 org.apache.hadoop.hdfs.protocol.ClientProtocol.rename
+2020-10-15 16:34:32 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #8
+2020-10-15 16:34:32 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: rename took 1ms
+2020-10-15 16:34:32 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping client from cache: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 16:34:32 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - removing client from cache: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 16:34:32 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 16:34:32 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - Stopping client
+2020-10-15 16:34:32 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs: closed
+2020-10-15 16:34:32 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs: stopped, remaining connections 0
+2020-10-15 16:34:32 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - Completed shutdown in 0.102 seconds; Timeouts: 0
+2020-10-15 16:34:32 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - ShutdownHookManger completed shutdown.
+2020-10-15 16:42:03 [main] DEBUG org.apache.hadoop.util.Shell - setsid exited with exit code 0
+2020-10-15 16:42:03 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL jar:file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar!/core-default.xml
+2020-10-15 16:42:03 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream sun.net.www.protocol.jar.JarURLConnection$JarURLInputStream@7921b0a2
+2020-10-15 16:42:03 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/etc/hadoop/conf.empty/core-site.xml
+2020-10-15 16:42:03 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream java.io.BufferedInputStream@1e397ed7
+2020-10-15 16:42:04 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 16:42:04 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, about=, always=false, type=DEFAULT, valueName=Time, value=[Rate of successful kerberos logins and latency (milliseconds)])
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, about=, always=false, type=DEFAULT, valueName=Time, value=[Rate of failed kerberos logins and latency (milliseconds)])
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, about=, always=false, type=DEFAULT, valueName=Time, value=[GetGroups])
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, about=, always=false, type=DEFAULT, valueName=Time, value=[Renewal failures since startup])
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, about=, always=false, type=DEFAULT, valueName=Time, value=[Renewal failures since last successful login])
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.metrics2.impl.MetricsSystemImpl - UgiMetrics, User and group related metrics
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.security.SecurityUtil - Setting hadoop.security.token.service.use_ip to true
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.security.Groups -  Creating new Groups object
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.security.Groups - Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping; cacheTimeout=300000; warningDeltaMs=5000
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login commit
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - Using user: "hdfs" with name hdfs
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - User entry: "hdfs"
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - UGI loginUser:hdfs (auth:SIMPLE)
+2020-10-15 16:42:04 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 16:42:04 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - Loading filesystems
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - s3n:// = class org.apache.hadoop.fs.s3native.NativeS3FileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-aws-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - gs:// = class com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/lib/hadoop/gcs-connector-hadoop3-1.9.10-cdh6.2.1-shaded.jar
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - file:// = class org.apache.hadoop.fs.LocalFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - viewfs:// = class org.apache.hadoop.fs.viewfs.ViewFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - ftp:// = class org.apache.hadoop.fs.ftp.FTPFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - har:// = class org.apache.hadoop.fs.HarFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - http:// = class org.apache.hadoop.fs.http.HttpFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - https:// = class org.apache.hadoop.fs.http.HttpsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - hdfs:// = class org.apache.hadoop.hdfs.DistributedFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - webhdfs:// = class org.apache.hadoop.hdfs.web.WebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - swebhdfs:// = class org.apache.hadoop.hdfs.web.SWebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking for FS supporting hdfs
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - looking for configuration option fs.hdfs.impl
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking in service filesystems for implementation class
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.fs.FileSystem - FS for hdfs is class org.apache.hadoop.hdfs.DistributedFileSystem
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.use.legacy.blockreader.local = false
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.read.shortcircuit = false
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.domain.socket.data.traffic = false
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.domain.socket.path = /var/run/hdfs-sockets/dn
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - Sets dfs.client.block.write.replace-datanode-on-failure.min-replication to 0
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.io.retry.RetryUtils - multipleLinearRandomRetry = null
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.ipc.Server - rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcProtobufRequest, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@28975c28
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.ipc.Client - ipc.client.bind.wildcard.addr set to true. Will bind client sockets to wildcard address.
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.ipc.Client - getting client out of cache: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Trying to load the custom-built native-hadoop library...
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Loaded the native-hadoop library
+2020-10-15 16:42:04 [client DomainSocketWatcher] DEBUG org.apache.hadoop.net.unix.DomainSocketWatcher - org.apache.hadoop.net.unix.DomainSocketWatcher$2@5a95e111: starting with interruptCheckPeriodMs = 60000
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.util.PerformanceAdvisory - Both short-circuit local reads and UNIX domain socket are disabled.
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.DataTransferSaslUtil - DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.ipc.Client - The ping interval is 60000 ms.
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.ipc.Client - Connecting to fbi-local-03/10.0.165.3:8020
+2020-10-15 16:42:04 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs: starting, having connections 1
+2020-10-15 16:42:04 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #0 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:42:04 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #0
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 49ms
+2020-10-15 16:42:04 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #1 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:42:04 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #1
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:42:04 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #2 org.apache.hadoop.hdfs.protocol.ClientProtocol.getServerDefaults
+2020-10-15 16:42:04 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #2
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getServerDefaults took 1ms
+2020-10-15 16:42:04 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #3 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:42:04 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #3
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 2ms
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - /user/hdfs/.Trash/Current/tmp/test: masked={ masked: rwx------, unmasked: rwx------ }
+2020-10-15 16:42:04 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #4 org.apache.hadoop.hdfs.protocol.ClientProtocol.mkdirs
+2020-10-15 16:42:04 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #4
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: mkdirs took 1ms
+2020-10-15 16:42:04 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #5 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:42:04 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #5
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:42:04 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #6 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:42:04 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #6
+2020-10-15 16:42:04 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:42:05 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #7 org.apache.hadoop.hdfs.protocol.ClientProtocol.rename2
+2020-10-15 16:42:05 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #7
+2020-10-15 16:42:05 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: rename2 took 1ms
+2020-10-15 16:42:05 [main] INFO org.apache.hadoop.fs.TrashPolicyDefault - Moved: 'hdfs://fbi-local-03:8020/tmp/test/my_config_file.xml' to trash at: hdfs://fbi-local-03:8020/user/hdfs/.Trash/Current/tmp/test/my_config_file.xml1602751324997
+2020-10-15 16:42:05 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping client from cache: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 16:42:05 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - removing client from cache: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 16:42:05 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 16:42:05 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - Stopping client
+2020-10-15 16:42:05 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs: closed
+2020-10-15 16:42:05 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs: stopped, remaining connections 0
+2020-10-15 16:42:05 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - Completed shutdown in 0.102 seconds; Timeouts: 0
+2020-10-15 16:42:05 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - ShutdownHookManger completed shutdown.
+2020-10-15 16:42:21 [main] DEBUG org.apache.hadoop.util.Shell - setsid exited with exit code 0
+2020-10-15 16:42:21 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL jar:file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar!/core-default.xml
+2020-10-15 16:42:21 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream sun.net.www.protocol.jar.JarURLConnection$JarURLInputStream@7921b0a2
+2020-10-15 16:42:21 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/etc/hadoop/conf.empty/core-site.xml
+2020-10-15 16:42:21 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream java.io.BufferedInputStream@1e397ed7
+2020-10-15 16:42:21 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 16:42:21 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, valueName=Time, value=[Rate of successful kerberos logins and latency (milliseconds)])
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, valueName=Time, value=[Rate of failed kerberos logins and latency (milliseconds)])
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, valueName=Time, value=[GetGroups])
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, valueName=Time, value=[Renewal failures since startup])
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, valueName=Time, value=[Renewal failures since last successful login])
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.metrics2.impl.MetricsSystemImpl - UgiMetrics, User and group related metrics
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.security.SecurityUtil - Setting hadoop.security.token.service.use_ip to true
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.security.Groups -  Creating new Groups object
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.security.Groups - Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping; cacheTimeout=300000; warningDeltaMs=5000
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login commit
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - Using user: "hdfs" with name hdfs
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - User entry: "hdfs"
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - UGI loginUser:hdfs (auth:SIMPLE)
+2020-10-15 16:42:22 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 16:42:22 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - Loading filesystems
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - s3n:// = class org.apache.hadoop.fs.s3native.NativeS3FileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-aws-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - gs:// = class com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/lib/hadoop/gcs-connector-hadoop3-1.9.10-cdh6.2.1-shaded.jar
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - file:// = class org.apache.hadoop.fs.LocalFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - viewfs:// = class org.apache.hadoop.fs.viewfs.ViewFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - ftp:// = class org.apache.hadoop.fs.ftp.FTPFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - har:// = class org.apache.hadoop.fs.HarFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - http:// = class org.apache.hadoop.fs.http.HttpFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - https:// = class org.apache.hadoop.fs.http.HttpsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - hdfs:// = class org.apache.hadoop.hdfs.DistributedFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - webhdfs:// = class org.apache.hadoop.hdfs.web.WebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - swebhdfs:// = class org.apache.hadoop.hdfs.web.SWebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking for FS supporting hdfs
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - looking for configuration option fs.hdfs.impl
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking in service filesystems for implementation class
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - FS for hdfs is class org.apache.hadoop.hdfs.DistributedFileSystem
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.use.legacy.blockreader.local = false
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.read.shortcircuit = false
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.domain.socket.data.traffic = false
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.domain.socket.path = /var/run/hdfs-sockets/dn
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - Sets dfs.client.block.write.replace-datanode-on-failure.min-replication to 0
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.io.retry.RetryUtils - multipleLinearRandomRetry = null
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.ipc.Server - rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcProtobufRequest, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@236e3f4e
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.ipc.Client - ipc.client.bind.wildcard.addr set to true. Will bind client sockets to wildcard address.
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.ipc.Client - getting client out of cache: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Trying to load the custom-built native-hadoop library...
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Loaded the native-hadoop library
+2020-10-15 16:42:22 [client DomainSocketWatcher] DEBUG org.apache.hadoop.net.unix.DomainSocketWatcher - org.apache.hadoop.net.unix.DomainSocketWatcher$2@6a7ae5bf: starting with interruptCheckPeriodMs = 60000
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.util.PerformanceAdvisory - Both short-circuit local reads and UNIX domain socket are disabled.
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.DataTransferSaslUtil - DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.ipc.Client - The ping interval is 60000 ms.
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.ipc.Client - Connecting to fbi-local-03/10.0.165.3:8020
+2020-10-15 16:42:22 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs: starting, having connections 1
+2020-10-15 16:42:22 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #0 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:42:22 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #0
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 49ms
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking for FS supporting file
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - looking for configuration option fs.file.impl
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking in service filesystems for implementation class
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.fs.FileSystem - FS for file is class org.apache.hadoop.fs.LocalFileSystem
+2020-10-15 16:42:22 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #1 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:42:22 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #1
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:42:22 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #2 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:42:22 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #2
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - /tmp/test/my_config_file.xml._COPYING_: masked={ masked: rw-r--r--, unmasked: rw-rw-rw- }
+2020-10-15 16:42:22 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #3 org.apache.hadoop.hdfs.protocol.ClientProtocol.create
+2020-10-15 16:42:22 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #3
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: create took 1ms
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - computePacketChunkSize: src=/tmp/test/my_config_file.xml._COPYING_, chunkSize=516, chunksPerPacket=126, packetSize=65016
+2020-10-15 16:42:22 [LeaseRenewer:hdfs@fbi-local-03:8020] DEBUG org.apache.hadoop.hdfs.client.impl.LeaseRenewer - Lease renewer daemon for [DFSClient_NONMAPREDUCE_-1020244662_1] with renew id 1 started
+2020-10-15 16:42:22 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #4 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:42:22 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #4
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - WriteChunk allocating new packet seqno=0, src=/tmp/test/my_config_file.xml._COPYING_, packetSize=65016, chunksPerPacket=126, bytesCurBlock=0, DFSOutputStream:block==null
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.hdfs.DataStreamer - Queued packet seqno: 0 offsetInBlock: 0 lastPacketInBlock: false lastByteOffsetInBlock: 7143, block==null
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.hdfs.DataStreamer - Queued packet seqno: 1 offsetInBlock: 7143 lastPacketInBlock: true lastByteOffsetInBlock: 7143, block==null
+2020-10-15 16:42:22 [main] DEBUG org.apache.hadoop.hdfs.DataStreamer - block==null waiting for ack for: 1
+2020-10-15 16:42:22 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - stage=PIPELINE_SETUP_CREATE, block==null
+2020-10-15 16:42:22 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - Allocating new block: block==null
+2020-10-15 16:42:22 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #5 org.apache.hadoop.hdfs.protocol.ClientProtocol.addBlock
+2020-10-15 16:42:22 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #5
+2020-10-15 16:42:22 [Thread-7] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: addBlock took 1ms
+2020-10-15 16:42:22 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - pipeline = [DatanodeInfoWithStorage[10.0.165.5:9866,DS-6ec67ad5-1671-4812-9f77-33d89b63a1c6,DISK], DatanodeInfoWithStorage[10.0.165.7:9866,DS-78e30179-1617-486e-9e7b-a91df93bbe3c,DISK], DatanodeInfoWithStorage[10.0.165.6:9866,DS-b40fa921-4895-40ff-b1fe-1159e51cbf6c,DISK]], blk_1074032185_291562
+2020-10-15 16:42:22 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - Connecting to datanode 10.0.165.5:9866
+2020-10-15 16:42:22 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - Send buf size 43520
+2020-10-15 16:42:22 [Thread-7] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.SaslDataTransferClient - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-10-15 16:42:22 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #6 org.apache.hadoop.hdfs.protocol.ClientProtocol.getServerDefaults
+2020-10-15 16:42:22 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #6
+2020-10-15 16:42:22 [Thread-7] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getServerDefaults took 1ms
+2020-10-15 16:42:22 [Thread-7] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.SaslDataTransferClient - SASL client skipping handshake in unsecured configuration for addr = /10.0.165.5, datanodeId = DatanodeInfoWithStorage[10.0.165.5:9866,DS-6ec67ad5-1671-4812-9f77-33d89b63a1c6,DISK]
+2020-10-15 16:42:23 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032185_291562] DEBUG org.apache.hadoop.hdfs.DataStreamer - nodes [DatanodeInfoWithStorage[10.0.165.5:9866,DS-6ec67ad5-1671-4812-9f77-33d89b63a1c6,DISK], DatanodeInfoWithStorage[10.0.165.7:9866,DS-78e30179-1617-486e-9e7b-a91df93bbe3c,DISK], DatanodeInfoWithStorage[10.0.165.6:9866,DS-b40fa921-4895-40ff-b1fe-1159e51cbf6c,DISK]] storageTypes [DISK, DISK, DISK] storageIDs [DS-6ec67ad5-1671-4812-9f77-33d89b63a1c6, DS-78e30179-1617-486e-9e7b-a91df93bbe3c, DS-b40fa921-4895-40ff-b1fe-1159e51cbf6c]
+2020-10-15 16:42:23 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032185_291562] DEBUG org.apache.hadoop.hdfs.DataStreamer - blk_1074032185_291562 sending packet seqno: 0 offsetInBlock: 0 lastPacketInBlock: false lastByteOffsetInBlock: 7143
+2020-10-15 16:42:23 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032185_291562] DEBUG org.apache.hadoop.hdfs.DataStreamer - stage=DATA_STREAMING, blk_1074032185_291562
+2020-10-15 16:42:23 [ResponseProcessor for block BP-2089173292-10.0.165.3-1591668467417:blk_1074032185_291562] DEBUG org.apache.hadoop.hdfs.DataStreamer - DFSClient seqno: 0 reply: SUCCESS reply: SUCCESS reply: SUCCESS downstreamAckTimeNanos: 720404 flag: 0 flag: 0 flag: 0
+2020-10-15 16:42:23 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032185_291562] DEBUG org.apache.hadoop.hdfs.DataStreamer - blk_1074032185_291562 sending packet seqno: 1 offsetInBlock: 7143 lastPacketInBlock: true lastByteOffsetInBlock: 7143
+2020-10-15 16:42:23 [ResponseProcessor for block BP-2089173292-10.0.165.3-1591668467417:blk_1074032185_291562] DEBUG org.apache.hadoop.hdfs.DataStreamer - DFSClient seqno: 1 reply: SUCCESS reply: SUCCESS reply: SUCCESS downstreamAckTimeNanos: 1480251 flag: 0 flag: 0 flag: 0
+2020-10-15 16:42:23 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032185_291562] DEBUG org.apache.hadoop.hdfs.DataStreamer - Closing old block BP-2089173292-10.0.165.3-1591668467417:blk_1074032185_291562
+2020-10-15 16:42:23 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #7 org.apache.hadoop.hdfs.protocol.ClientProtocol.complete
+2020-10-15 16:42:23 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #7
+2020-10-15 16:42:23 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: complete took 2ms
+2020-10-15 16:42:23 [main] DEBUG org.apache.hadoop.hdfs.DFSOutputStream - Closing an already closed stream. [Stream:true, streamer:true]
+2020-10-15 16:42:23 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #8 org.apache.hadoop.hdfs.protocol.ClientProtocol.rename
+2020-10-15 16:42:23 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #8
+2020-10-15 16:42:23 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: rename took 1ms
+2020-10-15 16:42:23 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping client from cache: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 16:42:23 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - removing client from cache: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 16:42:23 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 16:42:23 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - Stopping client
+2020-10-15 16:42:23 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs: closed
+2020-10-15 16:42:23 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs: stopped, remaining connections 0
+2020-10-15 16:42:23 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - Completed shutdown in 0.102 seconds; Timeouts: 0
+2020-10-15 16:42:23 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - ShutdownHookManger completed shutdown.
+2020-10-15 16:58:57 [main] DEBUG org.apache.hadoop.util.Shell - setsid exited with exit code 0
+2020-10-15 16:58:57 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL jar:file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar!/core-default.xml
+2020-10-15 16:58:57 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream sun.net.www.protocol.jar.JarURLConnection$JarURLInputStream@7921b0a2
+2020-10-15 16:58:57 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/etc/hadoop/conf.empty/core-site.xml
+2020-10-15 16:58:57 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream java.io.BufferedInputStream@1e397ed7
+2020-10-15 16:58:58 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 16:58:58 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, about=, always=false, type=DEFAULT, valueName=Time, value=[Rate of successful kerberos logins and latency (milliseconds)])
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, about=, always=false, type=DEFAULT, valueName=Time, value=[Rate of failed kerberos logins and latency (milliseconds)])
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, about=, always=false, type=DEFAULT, valueName=Time, value=[GetGroups])
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, about=, always=false, type=DEFAULT, valueName=Time, value=[Renewal failures since startup])
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, about=, always=false, type=DEFAULT, valueName=Time, value=[Renewal failures since last successful login])
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.metrics2.impl.MetricsSystemImpl - UgiMetrics, User and group related metrics
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.security.SecurityUtil - Setting hadoop.security.token.service.use_ip to true
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.security.Groups -  Creating new Groups object
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.security.Groups - Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping; cacheTimeout=300000; warningDeltaMs=5000
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login commit
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - Using user: "hdfs" with name hdfs
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - User entry: "hdfs"
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - UGI loginUser:hdfs (auth:SIMPLE)
+2020-10-15 16:58:58 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 16:58:58 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - Loading filesystems
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - s3n:// = class org.apache.hadoop.fs.s3native.NativeS3FileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-aws-3.0.0-cdh6.2.1.jar
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - gs:// = class com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/lib/hadoop/gcs-connector-hadoop3-1.9.10-cdh6.2.1-shaded.jar
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - file:// = class org.apache.hadoop.fs.LocalFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - viewfs:// = class org.apache.hadoop.fs.viewfs.ViewFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - ftp:// = class org.apache.hadoop.fs.ftp.FTPFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - har:// = class org.apache.hadoop.fs.HarFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - http:// = class org.apache.hadoop.fs.http.HttpFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - https:// = class org.apache.hadoop.fs.http.HttpsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - hdfs:// = class org.apache.hadoop.hdfs.DistributedFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - webhdfs:// = class org.apache.hadoop.hdfs.web.WebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - swebhdfs:// = class org.apache.hadoop.hdfs.web.SWebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking for FS supporting hdfs
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - looking for configuration option fs.hdfs.impl
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking in service filesystems for implementation class
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.fs.FileSystem - FS for hdfs is class org.apache.hadoop.hdfs.DistributedFileSystem
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.use.legacy.blockreader.local = false
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.read.shortcircuit = false
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.domain.socket.data.traffic = false
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.domain.socket.path = /var/run/hdfs-sockets/dn
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - Sets dfs.client.block.write.replace-datanode-on-failure.min-replication to 0
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.io.retry.RetryUtils - multipleLinearRandomRetry = null
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.ipc.Server - rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcProtobufRequest, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@28975c28
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.ipc.Client - ipc.client.bind.wildcard.addr set to true. Will bind client sockets to wildcard address.
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.ipc.Client - getting client out of cache: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Trying to load the custom-built native-hadoop library...
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Loaded the native-hadoop library
+2020-10-15 16:58:58 [client DomainSocketWatcher] DEBUG org.apache.hadoop.net.unix.DomainSocketWatcher - org.apache.hadoop.net.unix.DomainSocketWatcher$2@5a95e111: starting with interruptCheckPeriodMs = 60000
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.util.PerformanceAdvisory - Both short-circuit local reads and UNIX domain socket are disabled.
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.DataTransferSaslUtil - DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.ipc.Client - The ping interval is 60000 ms.
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.ipc.Client - Connecting to fbi-local-03/10.0.165.3:8020
+2020-10-15 16:58:58 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs: starting, having connections 1
+2020-10-15 16:58:58 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #0 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:58:58 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #0
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 48ms
+2020-10-15 16:58:58 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #1 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:58:58 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #1
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:58:58 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #2 org.apache.hadoop.hdfs.protocol.ClientProtocol.getServerDefaults
+2020-10-15 16:58:58 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #2
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getServerDefaults took 1ms
+2020-10-15 16:58:58 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #3 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:58:58 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #3
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - /user/hdfs/.Trash/Current/tmp/test: masked={ masked: rwx------, unmasked: rwx------ }
+2020-10-15 16:58:58 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #4 org.apache.hadoop.hdfs.protocol.ClientProtocol.mkdirs
+2020-10-15 16:58:58 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #4
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: mkdirs took 1ms
+2020-10-15 16:58:58 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #5 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:58:58 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #5
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:58:58 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #6 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:58:58 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #6
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:58:58 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #7 org.apache.hadoop.hdfs.protocol.ClientProtocol.rename2
+2020-10-15 16:58:58 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #7
+2020-10-15 16:58:58 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: rename2 took 1ms
+2020-10-15 16:58:59 [main] INFO org.apache.hadoop.fs.TrashPolicyDefault - Moved: 'hdfs://fbi-local-03:8020/tmp/test/my_config_file.xml' to trash at: hdfs://fbi-local-03:8020/user/hdfs/.Trash/Current/tmp/test/my_config_file.xml1602752338995
+2020-10-15 16:58:59 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping client from cache: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 16:58:59 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - removing client from cache: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 16:58:59 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 16:58:59 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - Stopping client
+2020-10-15 16:58:59 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs: closed
+2020-10-15 16:58:59 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs: stopped, remaining connections 0
+2020-10-15 16:58:59 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - Completed shutdown in 0.102 seconds; Timeouts: 0
+2020-10-15 16:58:59 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - ShutdownHookManger completed shutdown.
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.util.Shell - setsid exited with exit code 0
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL jar:file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar!/core-default.xml
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream sun.net.www.protocol.jar.JarURLConnection$JarURLInputStream@7921b0a2
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/etc/hadoop/conf.empty/core-site.xml
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream java.io.BufferedInputStream@1e397ed7
+2020-10-15 16:59:08 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 16:59:08 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, always=false, sampleName=Ops, type=DEFAULT, valueName=Time, value=[Rate of successful kerberos logins and latency (milliseconds)])
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, always=false, sampleName=Ops, type=DEFAULT, valueName=Time, value=[Rate of failed kerberos logins and latency (milliseconds)])
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, always=false, sampleName=Ops, type=DEFAULT, valueName=Time, value=[GetGroups])
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, always=false, sampleName=Ops, type=DEFAULT, valueName=Time, value=[Renewal failures since startup])
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, always=false, sampleName=Ops, type=DEFAULT, valueName=Time, value=[Renewal failures since last successful login])
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.metrics2.impl.MetricsSystemImpl - UgiMetrics, User and group related metrics
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.security.SecurityUtil - Setting hadoop.security.token.service.use_ip to true
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.security.Groups -  Creating new Groups object
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.security.Groups - Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping; cacheTimeout=300000; warningDeltaMs=5000
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login commit
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - Using user: "hdfs" with name hdfs
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - User entry: "hdfs"
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - UGI loginUser:hdfs (auth:SIMPLE)
+2020-10-15 16:59:08 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 16:59:08 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - Loading filesystems
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - s3n:// = class org.apache.hadoop.fs.s3native.NativeS3FileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-aws-3.0.0-cdh6.2.1.jar
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - gs:// = class com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/lib/hadoop/gcs-connector-hadoop3-1.9.10-cdh6.2.1-shaded.jar
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - file:// = class org.apache.hadoop.fs.LocalFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - viewfs:// = class org.apache.hadoop.fs.viewfs.ViewFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - ftp:// = class org.apache.hadoop.fs.ftp.FTPFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - har:// = class org.apache.hadoop.fs.HarFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - http:// = class org.apache.hadoop.fs.http.HttpFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - https:// = class org.apache.hadoop.fs.http.HttpsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - hdfs:// = class org.apache.hadoop.hdfs.DistributedFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - webhdfs:// = class org.apache.hadoop.hdfs.web.WebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - swebhdfs:// = class org.apache.hadoop.hdfs.web.SWebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking for FS supporting hdfs
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - looking for configuration option fs.hdfs.impl
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking in service filesystems for implementation class
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.fs.FileSystem - FS for hdfs is class org.apache.hadoop.hdfs.DistributedFileSystem
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.use.legacy.blockreader.local = false
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.read.shortcircuit = false
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.domain.socket.data.traffic = false
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.domain.socket.path = /var/run/hdfs-sockets/dn
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - Sets dfs.client.block.write.replace-datanode-on-failure.min-replication to 0
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.io.retry.RetryUtils - multipleLinearRandomRetry = null
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.ipc.Server - rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcProtobufRequest, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@236e3f4e
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.ipc.Client - ipc.client.bind.wildcard.addr set to true. Will bind client sockets to wildcard address.
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.ipc.Client - getting client out of cache: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Trying to load the custom-built native-hadoop library...
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Loaded the native-hadoop library
+2020-10-15 16:59:08 [client DomainSocketWatcher] DEBUG org.apache.hadoop.net.unix.DomainSocketWatcher - org.apache.hadoop.net.unix.DomainSocketWatcher$2@6239e8fa: starting with interruptCheckPeriodMs = 60000
+2020-10-15 16:59:08 [main] DEBUG org.apache.hadoop.util.PerformanceAdvisory - Both short-circuit local reads and UNIX domain socket are disabled.
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.DataTransferSaslUtil - DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.ipc.Client - The ping interval is 60000 ms.
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.ipc.Client - Connecting to fbi-local-03/10.0.165.3:8020
+2020-10-15 16:59:09 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs: starting, having connections 1
+2020-10-15 16:59:09 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #0 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:59:09 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #0
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 49ms
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking for FS supporting file
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.fs.FileSystem - looking for configuration option fs.file.impl
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking in service filesystems for implementation class
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.fs.FileSystem - FS for file is class org.apache.hadoop.fs.LocalFileSystem
+2020-10-15 16:59:09 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #1 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:59:09 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #1
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:59:09 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #2 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:59:09 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #2
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - /tmp/test/my_config_file.xml._COPYING_: masked={ masked: rw-r--r--, unmasked: rw-rw-rw- }
+2020-10-15 16:59:09 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #3 org.apache.hadoop.hdfs.protocol.ClientProtocol.create
+2020-10-15 16:59:09 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #3
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: create took 1ms
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - computePacketChunkSize: src=/tmp/test/my_config_file.xml._COPYING_, chunkSize=516, chunksPerPacket=126, packetSize=65016
+2020-10-15 16:59:09 [LeaseRenewer:hdfs@fbi-local-03:8020] DEBUG org.apache.hadoop.hdfs.client.impl.LeaseRenewer - Lease renewer daemon for [DFSClient_NONMAPREDUCE_-2041874185_1] with renew id 1 started
+2020-10-15 16:59:09 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #4 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 16:59:09 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #4
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - WriteChunk allocating new packet seqno=0, src=/tmp/test/my_config_file.xml._COPYING_, packetSize=65016, chunksPerPacket=126, bytesCurBlock=0, DFSOutputStream:block==null
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.hdfs.DataStreamer - Queued packet seqno: 0 offsetInBlock: 0 lastPacketInBlock: false lastByteOffsetInBlock: 7146, block==null
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.hdfs.DataStreamer - Queued packet seqno: 1 offsetInBlock: 7146 lastPacketInBlock: true lastByteOffsetInBlock: 7146, block==null
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.hdfs.DataStreamer - block==null waiting for ack for: 1
+2020-10-15 16:59:09 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - stage=PIPELINE_SETUP_CREATE, block==null
+2020-10-15 16:59:09 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - Allocating new block: block==null
+2020-10-15 16:59:09 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #5 org.apache.hadoop.hdfs.protocol.ClientProtocol.addBlock
+2020-10-15 16:59:09 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #5
+2020-10-15 16:59:09 [Thread-7] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: addBlock took 2ms
+2020-10-15 16:59:09 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - pipeline = [DatanodeInfoWithStorage[10.0.165.5:9866,DS-6ec67ad5-1671-4812-9f77-33d89b63a1c6,DISK], DatanodeInfoWithStorage[10.0.165.7:9866,DS-78e30179-1617-486e-9e7b-a91df93bbe3c,DISK], DatanodeInfoWithStorage[10.0.165.6:9866,DS-b40fa921-4895-40ff-b1fe-1159e51cbf6c,DISK]], blk_1074032208_291585
+2020-10-15 16:59:09 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - Connecting to datanode 10.0.165.5:9866
+2020-10-15 16:59:09 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - Send buf size 43520
+2020-10-15 16:59:09 [Thread-7] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.SaslDataTransferClient - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-10-15 16:59:09 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #6 org.apache.hadoop.hdfs.protocol.ClientProtocol.getServerDefaults
+2020-10-15 16:59:09 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #6
+2020-10-15 16:59:09 [Thread-7] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getServerDefaults took 1ms
+2020-10-15 16:59:09 [Thread-7] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.SaslDataTransferClient - SASL client skipping handshake in unsecured configuration for addr = /10.0.165.5, datanodeId = DatanodeInfoWithStorage[10.0.165.5:9866,DS-6ec67ad5-1671-4812-9f77-33d89b63a1c6,DISK]
+2020-10-15 16:59:09 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032208_291585] DEBUG org.apache.hadoop.hdfs.DataStreamer - nodes [DatanodeInfoWithStorage[10.0.165.5:9866,DS-6ec67ad5-1671-4812-9f77-33d89b63a1c6,DISK], DatanodeInfoWithStorage[10.0.165.7:9866,DS-78e30179-1617-486e-9e7b-a91df93bbe3c,DISK], DatanodeInfoWithStorage[10.0.165.6:9866,DS-b40fa921-4895-40ff-b1fe-1159e51cbf6c,DISK]] storageTypes [DISK, DISK, DISK] storageIDs [DS-6ec67ad5-1671-4812-9f77-33d89b63a1c6, DS-78e30179-1617-486e-9e7b-a91df93bbe3c, DS-b40fa921-4895-40ff-b1fe-1159e51cbf6c]
+2020-10-15 16:59:09 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032208_291585] DEBUG org.apache.hadoop.hdfs.DataStreamer - blk_1074032208_291585 sending packet seqno: 0 offsetInBlock: 0 lastPacketInBlock: false lastByteOffsetInBlock: 7146
+2020-10-15 16:59:09 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032208_291585] DEBUG org.apache.hadoop.hdfs.DataStreamer - stage=DATA_STREAMING, blk_1074032208_291585
+2020-10-15 16:59:09 [ResponseProcessor for block BP-2089173292-10.0.165.3-1591668467417:blk_1074032208_291585] DEBUG org.apache.hadoop.hdfs.DataStreamer - DFSClient seqno: 0 reply: SUCCESS reply: SUCCESS reply: SUCCESS downstreamAckTimeNanos: 634465 flag: 0 flag: 0 flag: 0
+2020-10-15 16:59:09 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032208_291585] DEBUG org.apache.hadoop.hdfs.DataStreamer - blk_1074032208_291585 sending packet seqno: 1 offsetInBlock: 7146 lastPacketInBlock: true lastByteOffsetInBlock: 7146
+2020-10-15 16:59:09 [ResponseProcessor for block BP-2089173292-10.0.165.3-1591668467417:blk_1074032208_291585] DEBUG org.apache.hadoop.hdfs.DataStreamer - DFSClient seqno: 1 reply: SUCCESS reply: SUCCESS reply: SUCCESS downstreamAckTimeNanos: 1449557 flag: 0 flag: 0 flag: 0
+2020-10-15 16:59:09 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032208_291585] DEBUG org.apache.hadoop.hdfs.DataStreamer - Closing old block BP-2089173292-10.0.165.3-1591668467417:blk_1074032208_291585
+2020-10-15 16:59:09 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #7 org.apache.hadoop.hdfs.protocol.ClientProtocol.complete
+2020-10-15 16:59:09 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #7
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: complete took 2ms
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.hdfs.DFSOutputStream - Closing an already closed stream. [Stream:true, streamer:true]
+2020-10-15 16:59:09 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #8 org.apache.hadoop.hdfs.protocol.ClientProtocol.rename
+2020-10-15 16:59:09 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #8
+2020-10-15 16:59:09 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: rename took 1ms
+2020-10-15 16:59:09 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping client from cache: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 16:59:09 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - removing client from cache: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 16:59:09 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 16:59:09 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - Stopping client
+2020-10-15 16:59:09 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs: closed
+2020-10-15 16:59:09 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs: stopped, remaining connections 0
+2020-10-15 16:59:09 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - Completed shutdown in 0.102 seconds; Timeouts: 0
+2020-10-15 16:59:09 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - ShutdownHookManger completed shutdown.
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.util.Shell - setsid exited with exit code 0
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL jar:file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar!/core-default.xml
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream sun.net.www.protocol.jar.JarURLConnection$JarURLInputStream@7921b0a2
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/etc/hadoop/conf.empty/core-site.xml
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream java.io.BufferedInputStream@1e397ed7
+2020-10-15 17:09:46 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 17:09:46 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, valueName=Time, value=[Rate of successful kerberos logins and latency (milliseconds)])
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, valueName=Time, value=[Rate of failed kerberos logins and latency (milliseconds)])
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, valueName=Time, value=[GetGroups])
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, valueName=Time, value=[Renewal failures since startup])
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, valueName=Time, value=[Renewal failures since last successful login])
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.metrics2.impl.MetricsSystemImpl - UgiMetrics, User and group related metrics
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.security.SecurityUtil - Setting hadoop.security.token.service.use_ip to true
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.security.Groups -  Creating new Groups object
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.security.Groups - Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping; cacheTimeout=300000; warningDeltaMs=5000
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login commit
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - Using user: "hdfs" with name hdfs
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - User entry: "hdfs"
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - UGI loginUser:hdfs (auth:SIMPLE)
+2020-10-15 17:09:46 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 17:09:46 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - Loading filesystems
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - s3n:// = class org.apache.hadoop.fs.s3native.NativeS3FileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-aws-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - gs:// = class com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/lib/hadoop/gcs-connector-hadoop3-1.9.10-cdh6.2.1-shaded.jar
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - file:// = class org.apache.hadoop.fs.LocalFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - viewfs:// = class org.apache.hadoop.fs.viewfs.ViewFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - ftp:// = class org.apache.hadoop.fs.ftp.FTPFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - har:// = class org.apache.hadoop.fs.HarFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - http:// = class org.apache.hadoop.fs.http.HttpFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - https:// = class org.apache.hadoop.fs.http.HttpsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - hdfs:// = class org.apache.hadoop.hdfs.DistributedFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - webhdfs:// = class org.apache.hadoop.hdfs.web.WebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - swebhdfs:// = class org.apache.hadoop.hdfs.web.SWebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking for FS supporting hdfs
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - looking for configuration option fs.hdfs.impl
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking in service filesystems for implementation class
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.fs.FileSystem - FS for hdfs is class org.apache.hadoop.hdfs.DistributedFileSystem
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.use.legacy.blockreader.local = false
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.read.shortcircuit = false
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.domain.socket.data.traffic = false
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.domain.socket.path = /var/run/hdfs-sockets/dn
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - Sets dfs.client.block.write.replace-datanode-on-failure.min-replication to 0
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.io.retry.RetryUtils - multipleLinearRandomRetry = null
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.ipc.Server - rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcProtobufRequest, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@28975c28
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.ipc.Client - ipc.client.bind.wildcard.addr set to true. Will bind client sockets to wildcard address.
+2020-10-15 17:09:46 [main] DEBUG org.apache.hadoop.ipc.Client - getting client out of cache: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 17:09:47 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Trying to load the custom-built native-hadoop library...
+2020-10-15 17:09:47 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Loaded the native-hadoop library
+2020-10-15 17:09:47 [client DomainSocketWatcher] DEBUG org.apache.hadoop.net.unix.DomainSocketWatcher - org.apache.hadoop.net.unix.DomainSocketWatcher$2@67f01b48: starting with interruptCheckPeriodMs = 60000
+2020-10-15 17:09:47 [main] DEBUG org.apache.hadoop.util.PerformanceAdvisory - Both short-circuit local reads and UNIX domain socket are disabled.
+2020-10-15 17:09:47 [main] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.DataTransferSaslUtil - DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2020-10-15 17:09:47 [main] DEBUG org.apache.hadoop.ipc.Client - The ping interval is 60000 ms.
+2020-10-15 17:09:47 [main] DEBUG org.apache.hadoop.ipc.Client - Connecting to fbi-local-03/10.0.165.3:8020
+2020-10-15 17:09:47 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs: starting, having connections 1
+2020-10-15 17:09:47 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #0 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 17:09:47 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #0
+2020-10-15 17:09:47 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 48ms
+2020-10-15 17:09:47 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #1 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 17:09:47 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #1
+2020-10-15 17:09:47 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 17:09:47 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #2 org.apache.hadoop.hdfs.protocol.ClientProtocol.getServerDefaults
+2020-10-15 17:09:47 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #2
+2020-10-15 17:09:47 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getServerDefaults took 1ms
+2020-10-15 17:09:47 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #3 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 17:09:47 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #3
+2020-10-15 17:09:47 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 0ms
+2020-10-15 17:09:47 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - /user/hdfs/.Trash/Current/tmp/test: masked={ masked: rwx------, unmasked: rwx------ }
+2020-10-15 17:09:47 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #4 org.apache.hadoop.hdfs.protocol.ClientProtocol.mkdirs
+2020-10-15 17:09:47 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #4
+2020-10-15 17:09:47 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: mkdirs took 1ms
+2020-10-15 17:09:47 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #5 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 17:09:47 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #5
+2020-10-15 17:09:47 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 17:09:47 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #6 org.apache.hadoop.hdfs.protocol.ClientProtocol.rename2
+2020-10-15 17:09:47 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #6
+2020-10-15 17:09:47 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: rename2 took 1ms
+2020-10-15 17:09:47 [main] INFO org.apache.hadoop.fs.TrashPolicyDefault - Moved: 'hdfs://fbi-local-03:8020/tmp/test/my_config_file.xml' to trash at: hdfs://fbi-local-03:8020/user/hdfs/.Trash/Current/tmp/test/my_config_file.xml
+2020-10-15 17:09:47 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping client from cache: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 17:09:47 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - removing client from cache: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 17:09:47 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@152aa092
+2020-10-15 17:09:47 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - Stopping client
+2020-10-15 17:09:47 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs: closed
+2020-10-15 17:09:47 [IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1665620686) connection to fbi-local-03/10.0.165.3:8020 from hdfs: stopped, remaining connections 0
+2020-10-15 17:09:47 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - Completed shutdown in 0.102 seconds; Timeouts: 0
+2020-10-15 17:09:47 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - ShutdownHookManger completed shutdown.
+2020-10-15 17:09:53 [main] DEBUG org.apache.hadoop.util.Shell - setsid exited with exit code 0
+2020-10-15 17:09:53 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL jar:file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar!/core-default.xml
+2020-10-15 17:09:53 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream sun.net.www.protocol.jar.JarURLConnection$JarURLInputStream@7921b0a2
+2020-10-15 17:09:53 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing URL file:/opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/etc/hadoop/conf.empty/core-site.xml
+2020-10-15 17:09:53 [main] DEBUG org.apache.hadoop.conf.Configuration - parsing input stream java.io.BufferedInputStream@1e397ed7
+2020-10-15 17:09:53 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 17:09:53 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, about=, type=DEFAULT, valueName=Time, value=[Rate of successful kerberos logins and latency (milliseconds)])
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, about=, type=DEFAULT, valueName=Time, value=[Rate of failed kerberos logins and latency (milliseconds)])
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, about=, type=DEFAULT, valueName=Time, value=[GetGroups])
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, about=, type=DEFAULT, valueName=Time, value=[Renewal failures since startup])
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, about=, type=DEFAULT, valueName=Time, value=[Renewal failures since last successful login])
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.metrics2.impl.MetricsSystemImpl - UgiMetrics, User and group related metrics
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.security.SecurityUtil - Setting hadoop.security.token.service.use_ip to true
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.security.Groups -  Creating new Groups object
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.security.Groups - Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping; cacheTimeout=300000; warningDeltaMs=5000
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - hadoop login commit
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - Using user: "hdfs" with name hdfs
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - User entry: "hdfs"
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.security.UserGroupInformation - UGI loginUser:hdfs (auth:SIMPLE)
+2020-10-15 17:09:54 [main] DEBUG org.apache.htrace.core.Tracer - sampler.classes = ; loaded no samplers
+2020-10-15 17:09:54 [main] DEBUG org.apache.htrace.core.Tracer - span.receiver.classes = ; loaded no span receivers
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - Loading filesystems
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - s3n:// = class org.apache.hadoop.fs.s3native.NativeS3FileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-aws-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - gs:// = class com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/lib/hadoop/gcs-connector-hadoop3-1.9.10-cdh6.2.1-shaded.jar
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - file:// = class org.apache.hadoop.fs.LocalFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - viewfs:// = class org.apache.hadoop.fs.viewfs.ViewFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - ftp:// = class org.apache.hadoop.fs.ftp.FTPFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - har:// = class org.apache.hadoop.fs.HarFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - http:// = class org.apache.hadoop.fs.http.HttpFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - https:// = class org.apache.hadoop.fs.http.HttpsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-common-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - hdfs:// = class org.apache.hadoop.hdfs.DistributedFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - webhdfs:// = class org.apache.hadoop.hdfs.web.WebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - swebhdfs:// = class org.apache.hadoop.hdfs.web.SWebHdfsFileSystem from /opt/cloudera/parcels/CDH-6.2.1-1.cdh6.2.1.p0.1425774/jars/hadoop-hdfs-client-3.0.0-cdh6.2.1.jar
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking for FS supporting hdfs
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - looking for configuration option fs.hdfs.impl
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking in service filesystems for implementation class
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - FS for hdfs is class org.apache.hadoop.hdfs.DistributedFileSystem
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.use.legacy.blockreader.local = false
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.read.shortcircuit = false
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.client.domain.socket.data.traffic = false
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.hdfs.client.impl.DfsClientConf - dfs.domain.socket.path = /var/run/hdfs-sockets/dn
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - Sets dfs.client.block.write.replace-datanode-on-failure.min-replication to 0
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.io.retry.RetryUtils - multipleLinearRandomRetry = null
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.ipc.Server - rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcProtobufRequest, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@236e3f4e
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.ipc.Client - ipc.client.bind.wildcard.addr set to true. Will bind client sockets to wildcard address.
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.ipc.Client - getting client out of cache: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Trying to load the custom-built native-hadoop library...
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.util.NativeCodeLoader - Loaded the native-hadoop library
+2020-10-15 17:09:54 [client DomainSocketWatcher] DEBUG org.apache.hadoop.net.unix.DomainSocketWatcher - org.apache.hadoop.net.unix.DomainSocketWatcher$2@600b6602: starting with interruptCheckPeriodMs = 60000
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.util.PerformanceAdvisory - Both short-circuit local reads and UNIX domain socket are disabled.
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.DataTransferSaslUtil - DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.ipc.Client - The ping interval is 60000 ms.
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.ipc.Client - Connecting to fbi-local-03/10.0.165.3:8020
+2020-10-15 17:09:54 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs: starting, having connections 1
+2020-10-15 17:09:54 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #0 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 17:09:54 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #0
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 47ms
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking for FS supporting file
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - looking for configuration option fs.file.impl
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - Looking in service filesystems for implementation class
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.fs.FileSystem - FS for file is class org.apache.hadoop.fs.LocalFileSystem
+2020-10-15 17:09:54 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #1 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 17:09:54 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #1
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 17:09:54 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #2 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 17:09:54 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #2
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - /tmp/test/my_config_file.xml._COPYING_: masked={ masked: rw-r--r--, unmasked: rw-rw-rw- }
+2020-10-15 17:09:54 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #3 org.apache.hadoop.hdfs.protocol.ClientProtocol.create
+2020-10-15 17:09:54 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #3
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: create took 1ms
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - computePacketChunkSize: src=/tmp/test/my_config_file.xml._COPYING_, chunkSize=516, chunksPerPacket=126, packetSize=65016
+2020-10-15 17:09:54 [LeaseRenewer:hdfs@fbi-local-03:8020] DEBUG org.apache.hadoop.hdfs.client.impl.LeaseRenewer - Lease renewer daemon for [DFSClient_NONMAPREDUCE_1653684336_1] with renew id 1 started
+2020-10-15 17:09:54 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #4 org.apache.hadoop.hdfs.protocol.ClientProtocol.getFileInfo
+2020-10-15 17:09:54 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #4
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getFileInfo took 1ms
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.hdfs.DFSClient - WriteChunk allocating new packet seqno=0, src=/tmp/test/my_config_file.xml._COPYING_, packetSize=65016, chunksPerPacket=126, bytesCurBlock=0, DFSOutputStream:block==null
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.hdfs.DataStreamer - Queued packet seqno: 0 offsetInBlock: 0 lastPacketInBlock: false lastByteOffsetInBlock: 7252, block==null
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.hdfs.DataStreamer - Queued packet seqno: 1 offsetInBlock: 7252 lastPacketInBlock: true lastByteOffsetInBlock: 7252, block==null
+2020-10-15 17:09:54 [main] DEBUG org.apache.hadoop.hdfs.DataStreamer - block==null waiting for ack for: 1
+2020-10-15 17:09:54 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - stage=PIPELINE_SETUP_CREATE, block==null
+2020-10-15 17:09:54 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - Allocating new block: block==null
+2020-10-15 17:09:54 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #5 org.apache.hadoop.hdfs.protocol.ClientProtocol.addBlock
+2020-10-15 17:09:54 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #5
+2020-10-15 17:09:54 [Thread-7] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: addBlock took 1ms
+2020-10-15 17:09:55 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - pipeline = [DatanodeInfoWithStorage[10.0.165.6:9866,DS-b40fa921-4895-40ff-b1fe-1159e51cbf6c,DISK], DatanodeInfoWithStorage[10.0.165.4:9866,DS-fb3f7c0a-b7a7-43f9-baff-7a8d445dc6d9,DISK], DatanodeInfoWithStorage[10.0.165.5:9866,DS-6ec67ad5-1671-4812-9f77-33d89b63a1c6,DISK]], blk_1074032221_291598
+2020-10-15 17:09:55 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - Connecting to datanode 10.0.165.6:9866
+2020-10-15 17:09:55 [Thread-7] DEBUG org.apache.hadoop.hdfs.DataStreamer - Send buf size 43520
+2020-10-15 17:09:55 [Thread-7] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.SaslDataTransferClient - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-10-15 17:09:55 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #6 org.apache.hadoop.hdfs.protocol.ClientProtocol.getServerDefaults
+2020-10-15 17:09:55 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #6
+2020-10-15 17:09:55 [Thread-7] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getServerDefaults took 1ms
+2020-10-15 17:09:55 [Thread-7] DEBUG org.apache.hadoop.hdfs.protocol.datatransfer.sasl.SaslDataTransferClient - SASL client skipping handshake in unsecured configuration for addr = /10.0.165.6, datanodeId = DatanodeInfoWithStorage[10.0.165.6:9866,DS-b40fa921-4895-40ff-b1fe-1159e51cbf6c,DISK]
+2020-10-15 17:09:55 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032221_291598] DEBUG org.apache.hadoop.hdfs.DataStreamer - nodes [DatanodeInfoWithStorage[10.0.165.6:9866,DS-b40fa921-4895-40ff-b1fe-1159e51cbf6c,DISK], DatanodeInfoWithStorage[10.0.165.4:9866,DS-fb3f7c0a-b7a7-43f9-baff-7a8d445dc6d9,DISK], DatanodeInfoWithStorage[10.0.165.5:9866,DS-6ec67ad5-1671-4812-9f77-33d89b63a1c6,DISK]] storageTypes [DISK, DISK, DISK] storageIDs [DS-b40fa921-4895-40ff-b1fe-1159e51cbf6c, DS-fb3f7c0a-b7a7-43f9-baff-7a8d445dc6d9, DS-6ec67ad5-1671-4812-9f77-33d89b63a1c6]
+2020-10-15 17:09:55 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032221_291598] DEBUG org.apache.hadoop.hdfs.DataStreamer - blk_1074032221_291598 sending packet seqno: 0 offsetInBlock: 0 lastPacketInBlock: false lastByteOffsetInBlock: 7252
+2020-10-15 17:09:55 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032221_291598] DEBUG org.apache.hadoop.hdfs.DataStreamer - stage=DATA_STREAMING, blk_1074032221_291598
+2020-10-15 17:09:55 [ResponseProcessor for block BP-2089173292-10.0.165.3-1591668467417:blk_1074032221_291598] DEBUG org.apache.hadoop.hdfs.DataStreamer - DFSClient seqno: 0 reply: SUCCESS reply: SUCCESS reply: SUCCESS downstreamAckTimeNanos: 787311 flag: 0 flag: 0 flag: 0
+2020-10-15 17:09:55 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032221_291598] DEBUG org.apache.hadoop.hdfs.DataStreamer - blk_1074032221_291598 sending packet seqno: 1 offsetInBlock: 7252 lastPacketInBlock: true lastByteOffsetInBlock: 7252
+2020-10-15 17:09:55 [ResponseProcessor for block BP-2089173292-10.0.165.3-1591668467417:blk_1074032221_291598] DEBUG org.apache.hadoop.hdfs.DataStreamer - DFSClient seqno: 1 reply: SUCCESS reply: SUCCESS reply: SUCCESS downstreamAckTimeNanos: 1290027 flag: 0 flag: 0 flag: 0
+2020-10-15 17:09:55 [DataStreamer for file /tmp/test/my_config_file.xml._COPYING_ block BP-2089173292-10.0.165.3-1591668467417:blk_1074032221_291598] DEBUG org.apache.hadoop.hdfs.DataStreamer - Closing old block BP-2089173292-10.0.165.3-1591668467417:blk_1074032221_291598
+2020-10-15 17:09:55 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #7 org.apache.hadoop.hdfs.protocol.ClientProtocol.complete
+2020-10-15 17:09:55 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #7
+2020-10-15 17:09:55 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: complete took 2ms
+2020-10-15 17:09:55 [main] DEBUG org.apache.hadoop.hdfs.DFSOutputStream - Closing an already closed stream. [Stream:true, streamer:true]
+2020-10-15 17:09:55 [IPC Parameter Sending Thread #0] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs sending #8 org.apache.hadoop.hdfs.protocol.ClientProtocol.rename
+2020-10-15 17:09:55 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs got value #8
+2020-10-15 17:09:55 [main] DEBUG org.apache.hadoop.ipc.ProtobufRpcEngine - Call: rename took 1ms
+2020-10-15 17:09:55 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping client from cache: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 17:09:55 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - removing client from cache: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 17:09:55 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@4e268090
+2020-10-15 17:09:55 [shutdown-hook-0] DEBUG org.apache.hadoop.ipc.Client - Stopping client
+2020-10-15 17:09:55 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs: closed
+2020-10-15 17:09:55 [IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs] DEBUG org.apache.hadoop.ipc.Client - IPC Client (1725008249) connection to fbi-local-03/10.0.165.3:8020 from hdfs: stopped, remaining connections 0
+2020-10-15 17:09:55 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - Completed shutdown in 0.102 seconds; Timeouts: 0
+2020-10-15 17:09:55 [Thread-5] DEBUG org.apache.hadoop.util.ShutdownHookManager - ShutdownHookManger completed shutdown.

@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS replication_step2_output(
+      action_name STRING,    -- action for stage 2, copied or skipped
+      src_path STRING,       -- hdfs file source path
+      dest_path STRING,      -- hdfs file destination path
+      size STRING,           -- file size
+      extra STRING,          -- extra error logging information
+      action_time STRING)    -- copy action time
+PARTITIONED BY (
+      job_start_time STRING) -- job run timestamp
+ROW FORMAT DELIMITED
+  FIELDS TERMINATED BY '\t'
+STORED AS TEXTFILE;
+
+LOAD DATA INPATH '$step2_output_directory' OVERWRITE INTO TABLE replication_step2_output
+PARTITION (job_start_time = '$job_start_time');

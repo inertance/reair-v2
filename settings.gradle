@@ -1,0 +1,12 @@
+rootProject.name = 'airbnb-reair-parent'
+include ':airbnb-reair-main'
+include ':airbnb-reair-hive-hooks'
+include ':airbnb-reair-utils'
+include ':airbnb-reair-thrift'
+include ':airbnb-reair-web-server'
+
+project(':airbnb-reair-main').projectDir = "$rootDir/main" as File
+project(':airbnb-reair-hive-hooks').projectDir = "$rootDir/hive-hooks" as File
+project(':airbnb-reair-utils').projectDir = "$rootDir/utils" as File
+project(':airbnb-reair-thrift').projectDir = "$rootDir/thrift" as File
+project(':airbnb-reair-web-server').projectDir = "$rootDir/web-server" as File

@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS replication_step3_output(
+      action_name STRING,
+      src_path STRING,
+      dest_path STRING,
+      copied_data STRING,
+      copied_metadata STRING,
+      db_name STRING,
+      table_name STRING,
+      partition_name STRING,
+      extra STRING)    -- extra information for commit phase
+PARTITIONED BY (
+      job_start_time STRING)
+ROW FORMAT DELIMITED
+  FIELDS TERMINATED BY '\t'
+STORED AS TEXTFILE;
+
+LOAD DATA INPATH '$step3_output_directory' OVERWRITE INTO TABLE replication_step3_output
+PARTITION (job_start_time = '$job_start_time');
