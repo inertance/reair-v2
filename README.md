@@ -64,7 +64,7 @@ you need figured out the
 ```
 db:table:partition  
 ```
-* if you want all partition add into blacklist , you can use 
+* if you want to add all partition into blacklist , you can use 
 ```
 db:table:.* 
 ```
