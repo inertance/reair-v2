@@ -50,12 +50,24 @@ my_db1.my_table1
 my_db2.my_table2
 ```
 * to limit parititon you need add the range of parititon for example.
-my_db1.my_table1.dt=2010-10-01:dt=2010-10-22  (it means only the partitions in the ranges will be copy, the start and end are include)
+```
+my_db1.my_table1.dt=2010-10-01:dt=2010-10-22 
 my_db2.my_table2.partitionName=start:paritionName=end
+ ```
+(it means only the partitions in the ranges will be copy, the start and end are include)
 
-then, on the blacklist in config.xml, you can't just figured out the db:table , you need figured out the db:table:partition . 
-if you want all partition add into blacklist , you can use db:table:.* ;
-
+* then, on the blacklist in config.xml, you can't just figured out the 
+```
+db:table
+```
+you need figured out the 
+```
+db:table:partition  
+```
+* if you want all partition add into blacklist , you can use 
+```
+db:table:.* 
+```
 
 
 * Launch the job using the `hadoop jar` command on the destination, specifying the config file and the list of tables to copy. A larger heap for the client may be needed for large batches, so set `HADOOP_HEAPSIZE` appropriately. Also, depending on how the warehouse is set up, you may need to run the process as a different user (e.g. `hive`).
