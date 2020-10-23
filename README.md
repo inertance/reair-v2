@@ -56,18 +56,12 @@ my_db2.my_table2.partitionName=start:paritionName=end
  ```
 (it means only the partitions in the ranges will be copy, the start and end are include)
 
-* then, on the blacklist in config.xml, you can't just figured out the 
+* then, on the blacklist in config.xml, you can figured out what tables not want to copy or what partitions not want to copy;
 ```
-db:table
+db:table1,db:table2:partition,... 
 ```
-you need figured out the 
-```
-db:table:partition  
-```
-* if you want to add all partition into blacklist , you can use 
-```
-db:table:.* 
-```
+they will sperator by ','
+db:table is the same as db:table:.* ,they are meaning whole table.
 
 
 * Launch the job using the `hadoop jar` command on the destination, specifying the config file and the list of tables to copy. A larger heap for the client may be needed for large batches, so set `HADOOP_HEAPSIZE` appropriately. Also, depending on how the warehouse is set up, you may need to run the process as a different user (e.g. `hive`).
