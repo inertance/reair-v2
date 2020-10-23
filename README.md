@@ -60,8 +60,8 @@ my_db2.my_table2.partitionName=start:paritionName=end
 ```
 db:table1,db:table2:partition,... 
 ```
-they will sperator by ','
-db:table is the same as db:table:.* ,they are meaning whole table.
+they will sperator by ',' .
+db:table is the same as db:table:.*  , they are meaning whole table.
 
 
 * Launch the job using the `hadoop jar` command on the destination, specifying the config file and the list of tables to copy. A larger heap for the client may be needed for large batches, so set `HADOOP_HEAPSIZE` appropriately. Also, depending on how the warehouse is set up, you may need to run the process as a different user (e.g. `hive`).
