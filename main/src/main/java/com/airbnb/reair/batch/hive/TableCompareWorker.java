@@ -78,8 +78,12 @@ public class TableCompareWorker {
     boolean matches(String dbName, String tableName, String partName) {
       Matcher dbMatcher = this.dbNamePattern.matcher(dbName);
       Matcher tblmatcher = this.tblNamePattern.matcher(tableName);
-      Matcher partMatcher = this.partNamePattern.matcher(partName);
-      return dbMatcher.matches() && tblmatcher.matches() && partMatcher.matches();
+      if (this.partNamePattern != null){
+         Matcher partMatcher = this.partNamePattern.matcher(partName);
+         return dbMatcher.matches() && tblmatcher.matches() && partMatcher.matches();
+      }else{
+         return dbMatcher.matches() && tblmatcher.matches();
+      }
     }
   }
 
